@@ -4,10 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
-import java.util.Scanner;
-
-import CUHackit.GpaCalc;
-import CUHackit.ClassCalc;
 
 public class GradeCalculator {
     public static void main(String args[]) throws IOException {
@@ -399,6 +395,8 @@ public class GradeCalculator {
         System.out.println("Enter the current total points in this weight category: ");
         str = br.readLine();
         double currPoints = Double.parseDouble(str);
+
+        System.out.println("\nYour current class average is a " + getAvg(weightsArr, gradesArr) + "%\n");
 
         //do while that allows the user to test as many times as they want without having to re-run the program
         int repeat;
